@@ -1,0 +1,134 @@
+"$schema" = "https://yazi-rs.github.io/schemas/theme.json"
+
+[mgr]
+cwd = { fg = "#268bd2" }
+find_keyword = { fg = "#b58900", bold = true, italic = true, underline = true }
+find_position = { fg = "#d33682", bg = "reset", bold = true, italic = true }
+symlink_target = { italic = true }
+marker_copied = { fg = "#859900", bg = "#859900" }
+marker_cut = { fg = "#dc322f", bg = "#dc322f" }
+marker_marked = { fg = "#6c71c4", bg = "#6c71c4" }
+marker_selected = { fg = "#cb4b16", bg = "#cb4b16" }
+count_copied = { fg = "#002b36", bg = "#859900" }
+count_cut = { fg = "#002b36", bg = "#dc322f" }
+count_selected = { fg = "#002b36", bg = "#cb4b16" }
+border_symbol = "│"
+border_style = { fg = "#6c71c4" }
+
+[tabs]
+active = { fg = "#002b36", bg = "#268bd2", bold = true }
+inactive = { fg = "#268bd2", bg = "#073642" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#002b36", bg = "#268bd2", bold = true }
+normal_alt = { fg = "#268bd2", bg = "#073642" }
+select_main = { fg = "#002b36", bg = "#6c71c4", bold = true }
+select_alt = { fg = "#6c71c4", bg = "#073642" }
+unset_main = { fg = "#002b36", bg = "#dc322f", bold = true }
+unset_alt = { fg = "#dc322f", bg = "#073642" }
+
+[indicator]
+parent = { reversed = true, fg = "#268bd2" }
+current = { reversed = true, fg = "#268bd2" }
+preview = { underline = true, fg = "#268bd2" }
+padding = { open = "█", close = "█" }
+
+[status]
+overall = {}
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_sep = { fg = "#93a1a1" }
+perm_type = { fg = "#268bd2" }
+perm_read = { fg = "#b58900" }
+perm_write = { fg = "#dc322f" }
+perm_exec = { fg = "#859900" }
+progress_label = { fg = "#839496", bold = true }
+progress_normal = { fg = "#6c71c4", bg = "#073642" }
+progress_error = { fg = "#073642", bg = "#dc322f" }
+
+[which]
+cols = 3
+mask = { bg = "#002b36" }
+cand = { fg = "#268bd2", bold = true }
+rest = { fg = "#586e75" }
+desc = { fg = "#586e75", italic = true }
+separator = "  "
+separator_style = { fg = "#586e75" }
+
+[confirm]
+border = { fg = "#268bd2", bold = true }
+title = { fg = "#268bd2" }
+body = { fg = "#586e75" }
+list = { fg = "#839496" }
+btn_yes = { fg = "#839496", bg = "#073642", bold = true }
+btn_no = { fg = "#93a1a1" }
+btn_labels = ["  [Y]es  ", "  (N)o  "]
+
+[spot]
+border = { fg = "#268bd2", bold = true }
+title = { fg = "#268bd2" }
+tbl_col = { fg = "#586e75" }
+tbl_cell = { fg = "#268bd2", bg = "#073642", bold = true }
+
+[notify]
+title_info = { fg = "#859900" }
+title_warn = { fg = "#cb4b16" }
+title_error = { fg = "#dc322f" }
+icon_info = ""
+icon_warn = ""
+icon_error = ""
+
+[pick]
+border = { fg = "#268bd2", bold = true }
+active = { fg = "#268bd2", bold = true }
+inactive = { fg = "#586e75" }
+
+[input]
+border = { fg = "#268bd2", bold = true }
+title = { fg = "#268bd2" }
+value = { fg = "#839496" }
+selected = { reversed = true }
+
+[cmp]
+border = { fg = "#268bd2", bold = true }
+active = { reversed = true }
+inactive = {}
+
+[tasks]
+border = { fg = "#268bd2", bold = true }
+title = { fg = "#268bd2" }
+hovered = { fg = "#d33682", bold = true }
+
+[help]
+on = { fg = "#268bd2" }
+run = { fg = "#d33682" }
+desc = { fg = "#586e75" }
+hovered = { bg = "#073642", bold = true }
+footer = { fg = "#839496", bg = "#073642" }
+
+[filetype]
+rules = [
+  # Image
+  { mime = "image/*", fg = "#268bd2" },
+  # Media
+  { mime = "video/*", fg = "#b58900" },
+  { mime = "audio/*", fg = "#b58900" },
+  # Archive
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#d33682" },
+  # Document
+  { mime = "application/{pdf,doc,rtf}", fg = "#859900" },
+  # Virtual file system
+  { mime = "vfs/{absent,stale}", fg = "#586e75" },
+  # Special file
+  { url = "*", is = "orphan", bg = "#dc322f" },
+  { url = "*", is = "exec", fg = "#859900" },
+  # Symbolic link
+  { url = "*", is = "link", fg = "#268bd2" },
+  # Dummy file
+  { url = "*", is = "dummy", bg = "#dc322f" },
+  { url = "*/", is = "dummy", bg = "#dc322f" },
+  # Fallback
+  { url = "*/", fg = "#6c71c4" },
+]
