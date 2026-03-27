@@ -122,7 +122,7 @@ rules = [
   # Virtual file system
   { mime = "vfs/{absent,stale}", fg = "#586e75" },
   # Special file
-  { url = "*", is = "orphan", bg = "#dc322f" },
+  { url = "*", is = "orphan", bg = "#dc322f", fg = "#f8f8f8" },
   { url = "*", is = "exec", fg = "#859900" },
   # Symbolic link
   { url = "*", is = "link", fg = "#268bd2" },
