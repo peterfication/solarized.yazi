@@ -6,6 +6,8 @@
 # base00  = #657b83
 # base0   = #839496
 # base1   = #93a1a1
+# base2   = #eee8d5
+# base3   = #fdf6e3
 # yellow  = #b58900
 # orange  = #cb4b16
 # red     = #dc322f
@@ -139,7 +141,7 @@ rules = [
   # Virtual file system
   { mime = "vfs/{absent,stale}", fg = "#586e75" },
   # Special file
-  { url = "*", is = "orphan", bg = "#dc322f", fg = "#f8f8f8" },
+  { url = "*", is = "orphan", bg = "#dc322f", fg = "#fdf6e3" },
   { url = "*", is = "exec", fg = "#859900" },
   # Symbolic link
   { url = "*", is = "link", fg = "#268bd2" },
